@@ -1,30 +1,30 @@
 //const { DataTypes } = require("sequelize/types");
 //const { sequelize } = require(".");
 
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
 
     const columnas = {
     id: {
-        type: dataTypes.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
     },
     title: {
-        type: dataTypes.STRING(500),
+        type: DataTypes.STRING(500),
     },
     rating: {
-        type: dataTypes.DECIMAL,
+        type: DataTypes.DECIMAL,
     },
     awards: {
-        type: dataTypes.INTEGER,
+        type: DataTypes.INTEGER,
     },
     release_date: {
-        type: dataTypes.DATE,
+        type: DataTypes.DATE,
     },
     length: {
-        type: dataTypes.INTEGER,
+        type: DataTypes.INTEGER,
     },
     genre_id: {
-        type: dataTypes.INTEGER,
+        type: DataTypes.INTEGER,
     }
     }
     const configuracionAdicional = {

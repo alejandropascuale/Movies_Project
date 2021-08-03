@@ -17,10 +17,7 @@ module.exports = {
     detail (req, res) {
         Movie.findByPk(req.params.id)
         .then(
-            (movie) => res.render ('moviesDetail', {movie})
-            )
-        .cath(
-            (error) => res.send(error)
+            (movie) => {res.render ('moviesDetail', {movie})}
             )
     },
     new (req, res) {
