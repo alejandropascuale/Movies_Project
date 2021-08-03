@@ -33,5 +33,19 @@ module.exports = {
         .catch(
             (error) => res.send(error)
         )
+    },
+    recomended (req, res) {
+        Movie.findAll(
+            {
+                order: [['rating', 'DESC'],['release_date', 'DESC']],
+                limit: 5
+            }
+        )
+        .then(
+            (movies) => res.render ('recommendedMovies', {movies})
+        )
+        .catch(
+            (error) => res.send(error)
+        )
     }
 }
